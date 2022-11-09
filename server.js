@@ -1,6 +1,6 @@
 const express = require("express")
 const app = express()
-const uri = "drive do se cluster do mongoDB"
+const uri = "drive do seu cluster do mongoDB"
 const { MongoClient }= require('mongodb-legacy')
 const ObjectId = require('mongodb-legacy').ObjectId
 
