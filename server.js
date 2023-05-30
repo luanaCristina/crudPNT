@@ -1,6 +1,6 @@
 const express = require("express")
 const app = express()
-const uri = "drive do seu cluster do mongoDB"
+const uri = "coloque o drive do seu cluster do mongodb aqui"
 const { MongoClient }= require('mongodb-legacy')
 const ObjectId = require('mongodb-legacy').ObjectId
 
@@ -11,8 +11,16 @@ const collection = db.collection('crud');
 
 //const ObjectId = require('mongodb').ObjectId
 
+app.set('views', './views')
 app.set("view engine", "ejs")
 app.use(express.urlencoded({extended:true}))
+
+//adicionar css
+app.use(express.static('public'))
+app.use('/css', express.static(__dirname +'public/css'))
+app.use('/js', express.static(__dirname +'public/js'))
+app.use('/img', express.static(__dirname +'public/img'))
+
 
 app.listen(3001, function(){
     console.log("o nosso servidor está rodando na porta 3001")
