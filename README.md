@@ -9,3 +9,5 @@ npm install
 4. Rode o projeto no terminal
 npm run dev
 
+5. Abra o browser de sua preferência (Chrome, Firefox, Opera, etc) e coloque a rota abaixo
+localhost:3001/index 
