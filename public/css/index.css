@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
-@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
+
 h2 {
     font-size: 18px;
     color:#7f479b;
+    font-family: 'Mynerve', cursive;
   }
 
 button {

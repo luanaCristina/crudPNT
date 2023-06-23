@@ -1,6 +1,8 @@
 const express = require("express")
 const app = express()
-const uri = "coloque o drive do seu cluster do mongodb aqui"
+const dotenv = require("dotenv")
+dotenv.config()
+const uri = process.env.DATABASE_URL
 const { MongoClient }= require('mongodb-legacy')
 const ObjectId = require('mongodb-legacy').ObjectId
 
@@ -34,6 +36,7 @@ app.get("/index", (req, res) => {
     res.render("index.ejs")
 })
 
+//criar no nosso banco de dados do mongodb
 app.post("/show", (req, res) => {
    collection.insertOne(req.body, (err, result)=> {
     if(err) return console.log(err)
@@ -44,6 +47,7 @@ app.post("/show", (req, res) => {
     })
    })
 })
+
 
 //renderizar e retornar o conteúdo do nosso banco
 app.get('/', (req, res) => {
